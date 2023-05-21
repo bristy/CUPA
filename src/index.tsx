@@ -1,15 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react'
+
 import reportWebVitals from './reportWebVitals';
+import ErrorPage from './components/error/error-page';
+import ActivityExam from './routes/activity/activity-exam'
+import Home from './routes/home/home';
+
+
+import { ErrorFindExamService } from './api/error-find-exam-service'
+
+const service: ErrorFindExamService = new ErrorFindExamService();
+
+export async function loadActivities() {
+  return await service.getErrorFindExam();
+}
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home/>,
+    errorElement: <ErrorPage/>,
+    loader: loadActivities,
+  },
+  {
+    path: '/test/:id',
+    element: <ActivityExam/>,
+    errorElement: <ErrorPage/>,
+    loader: loadActivities,
+  },
+  /*
+  {
+    path: '/results',
+    element: <ActivityExam/>,
+    errorElement: <ErrorPage/>,
+    loader: loadActivities,
+  },
+  {
+    path: '/results/:id',
+    element: <ActivityExam/>,
+    errorElement: <ErrorPage/>,
+    loader: loadActivities,
+  },*/
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <RouterProvider router={ router }/>
+    </ChakraProvider>
   </React.StrictMode>
 );
 

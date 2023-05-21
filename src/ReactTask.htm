@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <style>
+        <!--
+        /* Font Definitions */
+        @font-face
+        {font-family:"Cambria Math";
+            panose-1:2 4 5 3 5 4 6 3 2 4;}
+        @font-face
+        {font-family:Calibri;
+            panose-1:2 15 5 2 2 2 4 3 2 4;}
+        @font-face
+        {font-family:"Segoe UI";
+            panose-1:2 11 5 2 4 2 4 2 2 3;}
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal
+        {margin:0cm;
+            font-size:12.0pt;
+            font-family:"Calibri",sans-serif;}
+        .MsoChpDefault
+        {font-family:"Calibri",sans-serif;}
+        @page WordSection1
+        {size:595.3pt 841.9pt;
+            margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+        div.WordSection1
+        {page:WordSection1;}
+        /* List Definitions */
+        ol
+        {margin-bottom:0cm;}
+        ul
+        {margin-bottom:0cm;}
+        -->
+    </style>
+
+</head>
+
+<body lang=EN-GB link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>React: The task</span></b></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>This task is design to demonstrate your
+knowledge of React, ability to build and deploy and also your ability to think
+architecturally about how to make code reusable. We expect you to get a lot
+done, but will take a partial submission. You will need to be able to talk
+through your code and the decisions you made during the interview.</span></p>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>The brief:</span></b></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>Your task is to build and deploy a simple
+Typescript React web app which implements 2 flows of a simple quiz application.</span></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>The are 2 main parts / screens to the
+application:</span></p>
+
+    <ul style='margin-top:0cm' type=disc>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>Home
+     screen. The home screen will contain 2 buttons. Each button starts one of
+     the flows.</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>Question
+     screens, which are shown for each of the questions in each quiz.</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>Score
+     screen, which displays the score to the user and also a button to link to
+     the home screen/.</span></li>
+    </ul>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>Each of the flows displays a series of
+quiz multiple choice questions to the user and then takes the user back to the
+home page.</span></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>The quiz questions and answers come from
+an </span><span style='color:black'><a
+            href="https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json"
+            title="https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json"><span
+            style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>API</span></a></span><span
+            style='font-family:"Segoe UI",sans-serif;color:#172B4D;letter-spacing:-.05pt'>.
+You will need to pull them from the API and store them as you see appropriate.
+The structure of the 2 types of questions differ slightly so you need to
+inspect the structure and understand what has to be done.</span></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>The 2 flows differ slightly:</span></p>
+
+    <ul style='margin-top:0cm' type=disc>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>The first
+     user flow iterates through all the questions and then, when all questions
+     have been answered displays the score to the user</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>The second
+     user flow iterates through multiple sets of questions so that, when each
+     set of questions have been answered the user is prompted to &quot;take the
+     next round&quot;. When all rounds have been answered, the user is given
+     the score screen</span></li>
+    </ul>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>PLEASE NOTE.</span></b><span
+            style='font-family:"Segoe UI",sans-serif;color:#172B4D;letter-spacing:-.05pt'>
+Wireframes represent the flow, but won’t necessarily include all questions or
+accurate content. Please retrieve question and content data from the API.</span></p>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>Wireframe: </span></b><span
+            style='color:black'><a
+            href="https://xd.adobe.com/view/36feaa87-e6e3-4cc4-4acc-91842640b5b1-40cf/screen/41bdb932-efe1-43a1-a497-8343a6713cf7/3-Call-to-Action-Footers-5"
+            title="https://xd.adobe.com/view/36feaa87-e6e3-4cc4-4acc-91842640b5b1-40cf/screen/41bdb932-efe1-43a1-a497-8343a6713cf7/3-Call-to-Action-Footers-5"><span
+            style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>https://xd.adobe.com/view/36feaa87-e6e3-4cc4-4acc-91842640b5b1-40cf/screen/41bdb932-efe1-43a1-a497-8343a6713cf7/3-Call-to-Action-Footers-5</span></a></span><span
+            style='font-family:"Segoe UI",sans-serif;color:#172B4D;letter-spacing:-.05pt'>
+(We’re going to assume you’re comfortable with reading designs/mock ups in
+Adobe XD)</span></p>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>Mock API: </span></b><span
+            style='color:black'><a
+            href="https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json"
+            title="https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json"><span
+            style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json</span></a></span><b><span
+            style='font-family:"Segoe UI",sans-serif;color:#172B4D;letter-spacing:-.05pt'> </span></b></p>
+
+    <p class=MsoNormal style='background:white'><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>&nbsp;</span></p>
+
+    <p class=MsoNormal style='background:white'><b><span style='font-family:"Segoe UI",sans-serif;
+color:#172B4D;letter-spacing:-.05pt'>What we are looking for</span></b></p>
+
+    <ul style='margin-top:0cm' type=disc>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>The basics:
+     Built with React using Typescript, pulls from the API, the app looks
+     presentable, the app has been deployed to S3, github pages or another
+     static hosting service. (We don’t want it just running on your laptop.)</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>That you
+     have thought sensibly about the architectural decisions you have made. The
+     code is structured and written in a sane, readable way without
+     over-engineering and is spit logically.</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>Sufficient
+     documentation of the intent and of how to use the project (e.g. README)</span></li>
+        <li class=MsoNormal style='color:#172B4D;background:white'><span
+                style='font-family:"Segoe UI",sans-serif;letter-spacing:-.05pt'>Reusable
+     code is organised and understandable.</span></li>
+    </ul>
+
+    <p class=MsoNormal><span style='font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+    <p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

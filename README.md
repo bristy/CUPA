@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# React App Task
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Task Requirement
+See ReactTask #1.html committed with the code.
 
 ## Available Scripts
 
