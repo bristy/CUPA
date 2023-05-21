@@ -1,19 +1,18 @@
 import {Activity, Question } from "../../common/types/error-find";
 import {
-  Box, Card,
+  Card,
   CardBody,
   CardFooter,
   CardHeader,
   Flex,
   Heading,
+  Link,
   LinkBox,
-  LinkOverlay,
-  Spacer,
-  Stack,
   StackDivider,
   Text,
   VStack
 } from "@chakra-ui/react";
+import { Link as LinkRouter } from "react-router-dom";
 
 interface TestResultPageProps {
   activity: Activity,
@@ -44,9 +43,9 @@ const TestResultPage = (props: TestResultPageProps) => {
         <CardFooter>
           <LinkBox my={4}>
             <Heading size='xs' textTransform='uppercase'>
-              <LinkOverlay href='/'>
+              <Link  as={LinkRouter} to={'/CUPA'}>
                 Home
-              </LinkOverlay>
+              </Link>
             </Heading>
           </LinkBox>
         </CardFooter>

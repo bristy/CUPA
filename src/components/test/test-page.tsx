@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Activity, Question} from "../../common/types/error-find";
+import { Activity } from "../../common/types/error-find";
 import QuestionPage from "./question-page";
 import TestResultPage from "../result/test-result-page";
 

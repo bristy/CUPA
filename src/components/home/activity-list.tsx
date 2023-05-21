@@ -5,14 +5,14 @@ import {
   CardHeader,
   CardFooter,
   Heading,
+  Link,
   LinkBox,
-  LinkOverlay,
   Stack,
   StackDivider,
   VStack,
 } from '@chakra-ui/react';
 import {Activity, ErrorFindExam} from "../../common/types/error-find";
-
+import { Link as LinkRouter } from 'react-router-dom';
 export interface ActivityListProps {
   exam: ErrorFindExam,
 }
@@ -34,11 +34,11 @@ const ActivityList = (props: ActivityListProps) => {
             {props.exam.activities?.map((activity: Activity) => (
               <LinkBox>
                 <Box>
-                  <LinkOverlay href={`/test/${activity.activity_name}`}>
+                  <Link  as={LinkRouter} to={`/CUPA/test/${activity.activity_name}`}>
                   <Heading size='xs' textTransform='uppercase'>
                     {`${activity.activity_name}`}
                   </Heading>
-                  </LinkOverlay>
+                  </Link>
                 </Box>
               </LinkBox>
             ))}

@@ -19,13 +19,13 @@ export async function loadActivities() {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/CUPA',
     element: <Home/>,
     errorElement: <ErrorPage/>,
     loader: loadActivities,
   },
   {
-    path: '/test/:id',
+    path: '/CUPA/test/:id',
     element: <ActivityExam/>,
     errorElement: <ErrorPage/>,
     loader: loadActivities,
