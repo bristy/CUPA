@@ -34,7 +34,7 @@ const TestResultPage = (props: TestResultPageProps) => {
               <Flex w="100%" justifyContent="space-between">
                 <Flex>
                   <Text mx={24}>{`Q${question.order}.`}</Text>
-                  <Text mx={24}>{`${question.user_answer === question.is_correct ? 'CORRECT' : 'INCORRECT'}`}</Text>
+                  <Text mx={24} color={question.user_answer === question.is_correct? 'green.300' : 'red.300'}>{`${question.user_answer === question.is_correct ? 'CORRECT' : 'INCORRECT'}`}</Text>
                 </Flex>
               </Flex>
             ))}

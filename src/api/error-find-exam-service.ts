@@ -4,6 +4,9 @@ import { ErrorFindExam } from '../common/types/error-find';
  * Wrapper class to call backend for activity
  */
 export class ErrorFindExamService {
+  public static readonly ACTIVITY_ENDPOINT: string = 'https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json';
+
+
   private readonly PAYLOAD = '{\n' +
     '    "name": "Error Find",\n' +
     '    "heading": "This game teaches you to find mistakes in written text.",\n' +
@@ -103,8 +106,27 @@ export class ErrorFindExamService {
    */
   public async getErrorFindExam(): Promise<ErrorFindExam> {
 
-    const apiResponse = JSON.parse(this.PAYLOAD) as ErrorFindExam ;
-    return apiResponse;
-
+    try {
+      // TODO: this has CORS issue. It would require to have a proxy.
+  /*
+      const response = await fetch(ErrorFindExamService.ACTIVITY_ENDPOINT, {
+        mode: 'cors',
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log(`Got activity successfully ${response.body}`);
+      //return JSON.parse(this.PAYLOAD) as ErrorFindExam;
+      const payload = await response.json();
+      console.log(`Got activity successfully ${payload}`);
+      return JSON.parse(payload) as ErrorFindExam;
+      */
+      return JSON.parse(this.PAYLOAD) as ErrorFindExam;
+    } catch (err) {
+      console.log(`Failed to fetch activity ${JSON.stringify(err)}`);
+      throw err;
+      //return JSON.parse(this.PAYLOAD) as ErrorFindExam;
+    }
   }
 }
