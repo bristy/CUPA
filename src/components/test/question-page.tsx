@@ -5,17 +5,19 @@ import {
   CardHeader,
   CardFooter,
   Flex,
-  Text,
+  Text, Heading, Box, Center, ButtonGroup,
 } from '@chakra-ui/react';
 
 import { Question } from '../../common/types/error-find';
 
 interface QuestionProps {
+  activityName: string,
+  roundName?: string,
   question: Question,
-  submitAnswer(ans: boolean): void,
+  submitAnswer(ans: string): void,
 }
 const QuestionPage = (props: QuestionProps) => {
-  const handleClick = (response: boolean) => {
+  const handleClick = (response: string) => {
     props.submitAnswer(response);
   };
 
@@ -26,23 +28,30 @@ const QuestionPage = (props: QuestionProps) => {
 
   return (
     <>
-      <Card align='center'>
+      <Card>
         <CardHeader>
-
+          <Heading>
+            {props.activityName} { props.roundName && `/ ${props.roundName}`}
+          </Heading>
         </CardHeader>
         <CardBody>
+          <Box my={4}>
+            <Heading>
+              {`Q${props.question.order}.`}
+            </Heading>
+          </Box>
           <Text>{getQuestionRender(props.question.stimulus)}</Text>
         </CardBody>
         <CardFooter>
-          <Flex>
-            <Button colorScheme='teal' size='lg' mx={4} onClick={() => handleClick(true)}>
-              CORRECT
-            </Button>
+          <Center >
+              <Button colorScheme='teal' size='lg' mx={4} onClick={() => handleClick('CORRECT')}>
+                CORRECT
+              </Button>
 
-            <Button colorScheme='teal' size='lg' mx={4} onClick={() => handleClick(false)}>
-              INCORRECT
-            </Button>
-          </Flex>
+              <Button colorScheme='teal' size='lg' mx={4} onClick={() => handleClick('INCORRECT')}>
+                INCORRECT
+              </Button>
+          </Center>
         </CardFooter>
       </Card>
     </>

@@ -3,8 +3,7 @@ export interface Question {
   stimulus: string,
   order: number,
   feedback: string,
-  user_answers:string[], //
-  user_answer: boolean,
+  user_answers:string[],
 };
 
 export interface ActivityRound {
@@ -28,5 +27,5 @@ export interface Activity {
 export interface ErrorFindExam {
   name: string,
   heading: string,
-  activities: Activity[],
+  activities: Activity[] | ActivityWithRound[],
 }

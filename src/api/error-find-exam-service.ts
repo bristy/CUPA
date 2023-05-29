@@ -122,7 +122,8 @@ export class ErrorFindExamService {
       console.log(`Got activity successfully ${payload}`);
       return JSON.parse(payload) as ErrorFindExam;
       */
-      return JSON.parse(this.PAYLOAD) as ErrorFindExam;
+      const exam = JSON.parse(this.PAYLOAD) as ErrorFindExam;
+      return exam;
     } catch (err) {
       console.log(`Failed to fetch activity ${JSON.stringify(err)}`);
       throw err;

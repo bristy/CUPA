@@ -11,27 +11,27 @@ import {
   StackDivider,
   VStack,
 } from '@chakra-ui/react';
-import {Activity, ErrorFindExam} from "../../common/types/error-find";
+import {Activity, ActivityWithRound} from "../../common/types/error-find";
 import { Link as LinkRouter } from 'react-router-dom';
-export interface ActivityListProps {
-  exam: ErrorFindExam,
-}
+import { useAppSelector } from "../../common/types/hooks";
 
-const ActivityList = (props: ActivityListProps) => {
+
+const ActivityList = () => {
+  const exam = useAppSelector((examState) => examState.exam.errorFindExamState)
 
   return(
     <>
       <Card align='center'>
         <CardHeader>
           <VStack spacing={8}>
-            <Heading size='2xl'>{props.exam.name}</Heading>
-            <Heading size='sm'>{props.exam.heading}</Heading>
+            <Heading size='2xl'>{exam.name}</Heading>
+            <Heading size='sm'>{exam.heading}</Heading>
           </VStack>
         </CardHeader>
 
         <CardBody>
           <Stack divider={<StackDivider />} spacing='4'>
-            {props.exam.activities?.map((activity: Activity) => (
+            {exam.activities?.map((activity: Activity | ActivityWithRound) => (
               <LinkBox>
                 <Box>
                   <Link  as={LinkRouter} to={`/CUPA/test/${activity.activity_name}`}>
