@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/CUPA/static/js/main.0cf1c8e9.js",
+    "main.js": "/CUPA/static/js/main.ad0f8d0b.js",
     "static/js/787.fdefc428.chunk.js": "/CUPA/static/js/787.fdefc428.chunk.js",
     "index.html": "/CUPA/index.html",
-    "main.0cf1c8e9.js.map": "/CUPA/static/js/main.0cf1c8e9.js.map",
+    "main.ad0f8d0b.js.map": "/CUPA/static/js/main.ad0f8d0b.js.map",
     "787.fdefc428.chunk.js.map": "/CUPA/static/js/787.fdefc428.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0cf1c8e9.js"
+    "static/js/main.ad0f8d0b.js"
   ]
 }
