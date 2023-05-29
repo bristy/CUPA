@@ -26,7 +26,7 @@ const ActivityExam = () => {
     const activity: Activity | ActivityWithRound = loadActivity(id);
     setActivity(activity);
     setLoading(false);
-  }, [id])
+  }, [id, exam, navigate])
 
   function loadActivity(id: string): Activity | ActivityWithRound {
     for (let activity of exam.activities) {

@@ -4,8 +4,7 @@ import {
   CardBody,
   CardHeader,
   CardFooter,
-  Flex,
-  Text, Heading, Box, Center, ButtonGroup,
+  Text, Heading, Box, Center,
 } from '@chakra-ui/react';
 
 import { Question } from '../../common/types/error-find';

@@ -3,7 +3,6 @@ import {useAppDispatch} from "../../common/types/hooks";
 import * as React from "react";
 import {recordUserAnswer} from "../../store/error-find-exam-slice";
 import QuestionPage from "./question-page";
-import TestResultPage from "../result/test-result-page";
 import RoundPage from "./round-page";
 import TestWithRoundResultPage from "../result/test-with-round-result-page";
 
@@ -47,7 +46,7 @@ const TestWithRoundPage = (props: ActivityWithRoundProps) => {
   const loadNextRound = () => {
     const totalRounds = props.activity.questions.length;
     const nextRound = round + 1;
-    if (totalRounds == nextRound) {
+    if (totalRounds === nextRound) {
       setShowQuestion(false);
       setShowResult(true);
       setShowRound(false);

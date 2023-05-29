@@ -1,4 +1,4 @@
-import {Activity, ActivityRound, ActivityWithRound, Question} from "../../common/types/error-find";
+import {ActivityRound, ActivityWithRound, Question} from "../../common/types/error-find";
 import {
   Box,
   Card,
